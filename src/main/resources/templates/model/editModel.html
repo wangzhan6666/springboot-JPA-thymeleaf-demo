@@ -1,0 +1,64 @@
+
+<!-- 模态弹修改 -->
+<div class="modal fade" id="edit" th:fragment="editModel">
+	<div class="modal-dialog" >
+		<div class="modal-content message_align" >
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title">修改</h4>
+			</div>
+			<div class="modal-body">
+
+				<form action="/save" method="POST" class="form-horizontal">
+
+					<div class="row">
+						<input name="id" type="hidden" class="form-control" required>
+						<div class="form-group">
+							<label class="col-lg-2 control-label">课程名</label>
+							<div class="col-lg-10">
+								<input name="name" type="text" class="form-control" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-lg-2 control-label">简介</label>
+							<div class="col-lg-10">
+								<input name="des" type="text" class="form-control" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-lg-2 control-label">备注</label>
+							<div class="col-lg-10">
+								<input name="remark" type="text" class="form-control" required>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label class="col-lg-2 control-label">发布时间</label>
+							<div class="col-lg-10">
+								<div class="input-group date date1">
+									<span class="input-group-addon" style="border: 1px solid #ccc;"><i
+										class="fa fa-calendar"></i></span> <input name="createTime"
+										readonly="readonly" type="text" class="form-control" required>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="submit" class="btn btn-default">保存</button>
+					</div>
+
+			</form>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
